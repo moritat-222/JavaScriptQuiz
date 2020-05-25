@@ -77,7 +77,7 @@ function setQuiz(jsonObj){
 function createChoice(choice, jsonObj){
     const li = document.createElement('li')
     const btn = document.createElement('button')
-    btn.innerHTML = choice
+    btn.textContent = choice
     li.appendChild(btn)
     choiceBtnSection.appendChild(li)
     //選択肢ボタンを押した時の処理
@@ -111,7 +111,7 @@ function setAnswer(){
     questionNumber.textContent = "あなたの正答数は"　+ score + "です！！"
     question.textContent = "再チャレンジしたい場合は以下をクリック"
     const repeatBtn = document.createElement('button')
-    repeatBtn.innerHTML = "ホームに戻る"
+    repeatBtn.textContent = "ホームに戻る"
     choiceBtnSection.appendChild(repeatBtn)
         repeatBtn.addEventListener('click', () => {
             document.location.reload();
